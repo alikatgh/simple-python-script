@@ -81,7 +81,7 @@ columns_to_check = ['Q1', 'Q2', 'Q3']
 # Filter the dataframe
 df = df[df[columns_to_check].applymap(word_count).max(axis=1) >= 8]
 
-# Convert the UID column to string, avoid Excel messing it up
+# Avoid Excel messing up uids
 df['uid'] = df['uid'].astype(str)
 
 filename = "your-updated.xlsx"
